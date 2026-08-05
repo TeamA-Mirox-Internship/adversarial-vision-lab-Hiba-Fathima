@@ -1,0 +1,14 @@
+streamlit
+numpy
+opencv-python
+Pillow
+transformers
+torch
+torchvision
+accelerate
+huggingface-hub
+safetensors
+requests
+plotly
+piexif
+ollama
