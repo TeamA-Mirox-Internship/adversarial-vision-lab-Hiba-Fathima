@@ -1,28 +1,153 @@
-# Adversarial Vision Lab
+# AI Image Attack & Defense Dashboard
 
-## Overview
-This project demonstrates how adversarial attacks affect Vision AI models and how defense techniques help restore model performance.
+A Streamlit-based application for testing adversarial image attacks and evaluating defense techniques using AI vision models.
 
 ## Features
-- Image upload
-- Gaussian Noise attack
-- Pixel Shift attack
-- Prompt Injection (LSB/EXIF)
-- Metadata stripping
-- Gaussian blur defense
-- ViT image classification
-- LLaVA vision-language model support
-- Confidence comparison
-- Benchmark visualization
 
-## Technologies
+- Upload PNG or JPEG images
+- Apply adversarial attacks:
+  - Gaussian Noise
+  - Pixel Shift
+  - EXIF Prompt Injection
+  - LSB Prompt Injection
+- Apply defense techniques:
+  - EXIF Metadata Removal
+  - Gaussian Blur
+- Test images using:
+  - ViT Image Classifier
+  - LLaVA Vision Model
+- Compare:
+  - Original Image
+  - Attacked Image
+  - Defended Image
+- View confidence scores and attack evaluation
+- Download the processed image
+
+---
+
+## Prerequisites
+
+- Python 3.10 or later
+- Git
+- VS Code (recommended)
+
+For LLaVA support:
+
+- Install Ollama
+- Pull the LLaVA model
+
+```bash
+ollama pull llava
+```
+
+---
+
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone <repository-url>
+cd <repository-folder>
+```
+
+### 2. Create a virtual environment
+
+Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+Linux / macOS
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Run the Application
+
+If your main file is named `app.py`:
+
+```bash
+streamlit run app.py
+```
+
+If your main file is `app_new.py`:
+
+```bash
+streamlit run app_new.py
+```
+
+The application will open automatically in your web browser.
+
+---
+
+## Project Structure
+
+```
+project/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── new_modules/
+│   ├── noise_attack_new.py
+│   ├── stego_attack_new.py
+│   ├── vision_defense_new.py
+│   ├── vision_target_new.py
+│   └── vision_target_llava_new.py
+│
+└── temp/
+```
+
+---
+
+## Usage
+
+1. Upload a PNG or JPEG image.
+2. Select an attack method.
+3. Adjust attack parameters.
+4. (Optional) Enable defense filters.
+5. Select the target model (ViT or LLaVA).
+6. View predictions, confidence scores, and evaluation results.
+7. Download the processed image if needed.
+
+---
+
+## Notes
+
+- Maximum supported upload size: **20 MB**
+- Images larger than **1024 pixels** are automatically resized for faster processing.
+- LLaVA requires a locally running Ollama instance.
+- ViT works without Ollama.
+
+---
+
+## Technologies Used
+
 - Python
 - Streamlit
-- OpenCV
 - Pillow
 - NumPy
-- Transformers
-- Ollama
-- Huggingface ViT
+- Pandas
+- Transformers (ViT)
+- Ollama (LLaVA)
 
+---
 
+## Authors
+
+Internship Project
+AI Image Attack & Defense Dashboard
+Intern - Hiba Fathima K
