@@ -77,22 +77,9 @@ pip install -r requirements.txt
 
 ## Run the Application
 
-If your main file is named `app.py`:
-
-```bash
-streamlit run app.py
-```
-
-If your main file is `app_new.py`:
-
 ```bash
 streamlit run app_new.py
 ```
-
-The application will open automatically in your web browser.
-
----
-
 ## Project Structure
 
 ```
@@ -101,17 +88,20 @@ project/
 ├── app.py
 ├── requirements.txt
 ├── README.md
-├── new_modules/
-│   ├── noise_attack_new.py
-│   ├── stego_attack_new.py
-│   ├── vision_defense_new.py
-│   ├── vision_target_new.py
-│   └── vision_target_llava_new.py
-│
-└── temp/
+├── modules/
+│   ├── stego_attack.py
+│   ├── vision_defense.py
+│   ├── vision_target.py
+│   └── vision_target_llava.py
+│──Benchmark/
+|   └── Test_report_hiba.xlx
+|
+│──Results/
+     ├── Attack success rate.png
+     ├── defense recovery rate.png
+     └── Attack vs Defense success rate.png
+   
 ```
-
----
 
 ## Usage
 
