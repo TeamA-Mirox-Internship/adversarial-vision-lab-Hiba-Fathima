@@ -139,5 +139,7 @@ project/
 ## Authors
 
 Internship Project
+
 AI Image Attack & Defense Dashboard
+
 Intern - Hiba Fathima K
